@@ -54,3 +54,4 @@ $stmt2-> close();
 $mysqli->close();
 
 ?>
+<br><center><a href="index.html" class="button">Back to Home</a></br></center>

@@ -93,3 +93,4 @@ $mysqli6->close();
 
 
 </body>
+<br><center><a href="index.html" class="button">Back to Home</a></br></center>
