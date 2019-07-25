@@ -7,6 +7,7 @@
 <body>
     <!-- Provides a link back to the Home page. -->
     <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+    <h1>Available Rooms</h1>
     <?php
         // Enable error logging: 
         error_reporting(E_ALL ^ E_NOTICE);
