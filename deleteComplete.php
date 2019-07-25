@@ -1,6 +1,6 @@
 <head>
     <title>Delete Guest</title>
-    <link rel="stylesheet" href="formFormat.css">
+    <link rel="stylesheet" href="messageFormat.css">
 </head>
 
 <body>
