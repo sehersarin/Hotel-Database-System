@@ -1,5 +1,5 @@
-/* Style formatting to enhance the appearance of the home page. 
-   Inserted the CSS code into the actual html and php files to reduce the number of files submitted. */
+/* Style formatting to enhance the appearance of the user interfaces.
+   Used separate CSS files as there is similarity in the file formatting.*/
 
 h1 {
     font-family: sans-serif;
@@ -7,7 +7,7 @@ h1 {
     text-align: center;
 }
 
-input[type=text], select, input[type=date], option {
+input[type=text], select, input[type=date], option, input[type=number] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
