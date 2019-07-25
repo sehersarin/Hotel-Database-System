@@ -16,7 +16,7 @@
             <p>Enter Booking ID: </p>
             <!-- Stores the user input of booking ID into a variable named bID. -->
             <input type="text" name="bID" required/><br>
-            <input type="submit" name="submit" value="Continue"/>
+            <input type="submit" name="submit" class="teal" value="Continue"/>
 
         </form>
 
