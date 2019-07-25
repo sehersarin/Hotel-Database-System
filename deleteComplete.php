@@ -6,8 +6,6 @@
 <body>
     <!-- Provides a link back to the Home page. -->
     <a href="index.html" class="button">Back to Home</a> <br>
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
 
     <?php
     // Enable error logging: 
