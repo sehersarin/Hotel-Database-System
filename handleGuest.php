@@ -52,7 +52,7 @@
                 echo '<input type="text" name="pcode" value="'.$postal_code.'"/><br>'; 
                 echo '<label for="phone_no">Phone Number: </label>'; 
                 echo '<input type="text" name="phone_no" value="'.$phone_no.'"/><br>'; 
-                echo '<input type="submit" value="Update"/>';
+                echo '<input type="submit" class="pink" value="Update"/>';
             } 
             // Provides a message to the user if the guest does not exist.
             else {
