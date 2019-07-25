@@ -53,7 +53,7 @@
             // Prints the desired statistics for the selected employee type (or all). 
             if ($stmt->fetch()){
                 printf('Average salary of %s employees: $%.2f <br>', $type, $avg_salary);
-                printf('Average hours/week of %s employees: $%.2f <br>', $type, $avg_hours);
+                printf('Average hours/week of %s employees: %.2f hours<br>', $type, $avg_hours);
                 printf('Maximum salary of %s employees: $%.2f <br>', $type, $max_salary);
                 printf('Minimum salary of %s employees: $%.2f <br>', $type, $min_salary);
             }
