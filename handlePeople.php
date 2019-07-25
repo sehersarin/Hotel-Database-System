@@ -51,7 +51,7 @@
             } 
             // Message to display for the user if the booking does not exist in the system.
             else {
-                echo "Booking not found in the database. Please try again."; 
+                echo '<center>Booking not found in the database. Please try again.</center>'; 
             }
 
             // Close statement and connection. 
