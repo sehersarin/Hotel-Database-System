@@ -52,10 +52,10 @@
             
             // Prints the desired statistics for the selected employee type (or all). 
             if ($stmt->fetch()){
-                echo 'Average salary of ' . $type . ' employees : ' . $avg_salary . '<br>';
-                echo 'Average hours per week of ' . $type . ' employees: ' . $avg_hours . '<br>';
-                echo 'Maximum salary of ' . $type . ' employees: ' . $max_salary . '<br>';
-                echo 'Minimum salary of ' . $type . ' employees: ' . $min_salary . '<br>';
+                printf('Average salary of %s employees: $%.2f <br>', $type, $avg_salary);
+                printf('Average hours/week of %s employees: $%.2f <br>', $type, $avg_hours);
+                printf('Maximum salary of %s employees: $%.2f <br>', $type, $max_salary);
+                printf('Minimum salary of %s employees: $%.2f <br>', $type, $min_salary);
             }
             // Else statement to display an error message in the event of any errors.
             else {
