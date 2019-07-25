@@ -1,48 +1,57 @@
-<h1>Possible Hotels</h1>
+<head>
+  <title>See Event Booking for Large Groups</title>
+</head>
 
-<?php
-// Enable error logging: 
-error_reporting(E_ALL ^ E_NOTICE);
-// mysqli connection via user-defined function
+<body>
+    <h1>Possible Hotels</h1>
 
-include('./my_connect.php');
-$mysqli = get_mysqli_conn();
+    <?php
+        // Enable error logging: 
+        error_reporting(E_ALL ^ E_NOTICE);
 
-// SQL statement
-$sql = "SELECT DISTINCT hotel_name "
-. "FROM room natural join type natural join hotel "
-. "GROUP BY hotel_name "
-. "HAVING SUM(capacity) > ?";
+        // mysqli connection via user-defined function
+        include('./my_connect.php');
+        $mysqli = get_mysqli_conn();
 
-// Prepared statement, stage 1: prepare
-$stmt = $mysqli->prepare($sql);
+        // SQL statement to get the hotel names of all hotels that have a total room capacity greater or equal to than the desired number of people.
+        $sql = "SELECT DISTINCT hotel_name "
+        . "FROM room natural join type natural join hotel "
+        . "GROUP BY hotel_name "
+        . "HAVING SUM(capacity) >= ?";
 
-// Prepared statement, stage 2: bind and execute 
-$numPeople = $_GET['numPeople']; 
-// "i" for integer, "d" for double, "s" for string, "b" for blob 
-$stmt->bind_param('i', $numPeople); 
-$stmt->execute();
+        // Prepared statement, stage 1: prepare
+        $stmt = $mysqli->prepare($sql);
 
-$stmt->bind_result($hotel_name);
+        // Prepared statement, stage 2: bind and execute.
+        $numPeople = $_GET['numPeople']; 
+        $stmt->bind_param('i', $numPeople); 
+        $stmt->execute();
 
-echo '<ul>';
+        // Binds the results of the query into a variable.
+        $stmt->bind_result($hotel_name);
 
-/* fetch values */ 
-if ($stmt->fetch()) { 
-    do {
-        printf('<li>%s</li>', $hotel_name);
-    } while($stmt->fetch());
+        // Uses a list format to list the potential hotels.
+        echo '<ul>';
 
-} 
-else {
-    echo 'Record not found'; 
-}
-echo '</ul>';
+        // Fetches the result of the SQL query. Uses a do while loop as the fetch() is executed in the if statement.
+        if ($stmt->fetch()) { 
+            do {
+                printf('<li>%s</li>', $hotel_name);
+            } while($stmt->fetch());
 
-/* close statement and connection*/ 
-$stmt->close(); 
-$mysqli->close();
+        } 
+        // Prints a message to the user if there is no hotel with a total room capacity greater than or equal to the desired number.
+        else {
+            echo 'No hotels have a total room capacity greater than ' . $numPeople; 
+        }
+        echo '</ul>';
 
-?>
+        // Close statement and connection. 
+        $stmt->close(); 
+        $mysqli->close();
 
-<br><center><a href="index.html" class="button">Back to Home</a></br></center>
+    ?>
+
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+</body>

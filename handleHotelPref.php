@@ -1,47 +1,60 @@
-<h1>Select Desired Hotel</h1>
+<head>
+  <title>Check Hotel Availability</title>
+</head>
 
-<form action="listAvailableRooms.php" method="post"/>
+<body>
+    <h1>Select Desired Hotel</h1>
+    
+    <!-- Directs to the listAvailableRooms.php when the user presses the Check Availability button.
+     Uses post as it is more secure than get -->
+    <form action="listAvailableRooms.php" method="post">
 
-<?php
-// Enable error logging: 
-error_reporting(E_ALL ^ E_NOTICE);
-// mysqli connection via user-defined function
+        <?php
+            // Enable error logging: 
+            error_reporting(E_ALL ^ E_NOTICE);
+            // mysqli connection via user-defined function
 
-include('./my_connect.php');
-$mysqli = get_mysqli_conn();
+            include('./my_connect.php');
+            $mysqli = get_mysqli_conn();
 
-// SQL statement
-$sql = "SELECT DISTINCT name "
-	. "FROM hotel "
-    . "WHERE chain_name = ? ";
+            // SQL statement to get a list of the unique hotel names in the chain. Does not need DISTINCT as name is the primary key of the hotel entity.
+            $sql = "SELECT name "
+                . "FROM hotel "
+                . "WHERE chain_name = ? ";
 
-// Prepared statement, stage 1: prepare
-$stmt = $mysqli->prepare($sql);
+            // Prepared statement, stage 1: prepare.
+            $stmt = $mysqli->prepare($sql);
 
-// Prepared statement, stage 2: bind and execute 
-$chain = $_POST['chain']; 
-// "i" for integer, "d" for double, "s" for string, "b" for blob 
-$stmt->bind_param('s', $chain); 
-$stmt->execute();
+            // Prepared statement, stage 2: bind and execute.
+            $chain = $_POST['chain']; 
+            $stmt->bind_param('s', $chain); 
+            $stmt->execute();
 
-// Bind result variables 
-$stmt->bind_result($hotel_name); 
+            // Bind result variable.
+            $stmt->bind_result($hotel_name); 
 
-/* fetch values */ 
-echo '<label for="hotel">Hotel: </label>'; 
-echo '<select name="hotel">'; 
-while ($stmt->fetch()) {
-    printf ('<option>%s</option>', $hotel_name); 
-}
-echo '</select><br>'; 
+            // Initializes the drop-down with the unique hotel names.
+            echo '<label for="hotel">Hotel: </label>'; 
+            echo '<select name="hotel">'; 
 
-echo '<input type="date" name="sDate" value="'.$startDate.'"/><br>'; 
-echo '<input type="date" name="eDate" value="'.$endDate.'"/><br>'; 
+            // Uses a while loop to add values to the drop-down as long as there is a value to fetch.
+            while ($stmt->fetch()) {
+                printf ('<option>%s</option>', $hotel_name); 
+            }
+            echo '</select><br>'; 
 
-/* close statement and connection*/ 
-$stmt->close(); 
-$mysqli->close();
-?>
-<br>
-<input type="submit" value="Check Availability"/>
+            // Stores the user's inputs for the start and end date in variables named sDate and eDate respectively.
+            echo '<input type="date" name="sDate" value="'.$startDate.'"/><br>'; 
+            echo '<input type="date" name="eDate" value="'.$endDate.'"/><br>'; 
 
+            // Close statement and connection.
+            $stmt->close(); 
+            $mysqli->close();
+        ?>
+        <br>
+        <input type="submit" value="Check Availability"/>
+    </form>
+
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+</body>

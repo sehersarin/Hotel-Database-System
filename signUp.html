@@ -1,22 +1,33 @@
-
-<body>
-<h1>Sign Up!</h1>
-
-<form action="completeSignUp.php" method="post">
-
-    First Name: <br>    
-    <input type="text" name="fname"/><br>
-    Last Name: <br>   
-    <input type="text" name="lname"/><br>
-    City: <br>   
-    <input type="text" name="city"/><br>
-    Street: <br>   
-    <input type="text" name="street"/><br>
-    Postal Code: <br>   
-    <input type="text" name="pcode"/><br>
-    Phone Number: <br>   
-    <input type="text" name="phone"/><br>
-    <input type="submit" name="submit" value="Continue"/>
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Sign Up!</title>
+    </head>
     
-</form>
-</body>
+    <body>
+        <h1>Sign Up!</h1>
+        
+         <!-- Directs to the signUpComplete.php when the user presses the Continue button. 
+        Uses post as it is more secure than get. --> 
+        <form action="signUpComplete.php" method="post">
+            <!-- Stores the user inputs into variables to be fetched in another file. -->
+            First Name: <br>    
+            <input type="text" name="fname"/><br>
+            Last Name: <br>   
+            <input type="text" name="lname"/><br>
+            City: <br>   
+            <input type="text" name="city"/><br>
+            Street: <br>   
+            <input type="text" name="street"/><br>
+            Postal Code: <br>   
+            <input type="text" name="pcode"/><br>
+            Phone Number: <br>   
+            <input type="text" name="phone"/><br>
+            <input type="submit" name="submit" value="Continue"/>
+
+        </form>
+        
+        <!-- Provides a link back to the Home page. -->
+        <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+    </body>
+</html>

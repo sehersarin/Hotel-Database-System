@@ -1,54 +1,63 @@
-<h1>Update Booking</h1>
+<head>
+  <title>Update Booking</title>
+</head>
 
-<?php
-// Enable error logging: 
-error_reporting(E_ALL ^ E_NOTICE);
-// mysqli connection via user-defined 
-include('./my_connect.php');
-$mysqli = get_mysqli_conn();
-// SQL statement
+<body>
 
-// SQL statement 2: updates booking based on number of adults
-$sql2 = "UPDATE booking "
-. "set no_adults = ? "
-. "WHERE ID = ?";
+    <h1>Update Booking</h1>
 
-//SQL statement 3
-$sql3 = "UPDATE booking "
-. "set no_child = ? "
-. "WHERE ID = ?";
+    <?php
+        // Enable error logging: 
+        error_reporting(E_ALL ^ E_NOTICE);
 
+        // mysqli connection via user-defined 
+        include('./my_connect.php');
+        $mysqli = get_mysqli_conn();
 
-$bID = $_POST['bid']; 
-$nadult = $_POST['nadult']; 
-$nchild = $_POST['nchild']; 
+        // SQL statement to update booking based on number of adults.
+        $sql1 = "UPDATE booking "
+        . "SET no_adults = ? "
+        . "WHERE ID = ?";
 
-// Prepared statement, stage 1: prepare
-$stmt2 = $mysqli->prepare($sql2);
-$stmt2->bind_param('is', $nadult, $bID); 
+        // SQL statement to update booking based on number of children.
+        $sql2 = "UPDATE booking "
+        . "SET no_child = ? "
+        . "WHERE ID = ?";
 
-/* fetch values */ 
-if ($stmt2->execute()) { 
-    // Prepared statement, stage 1: prepare
-    $stmt3 = $mysqli->prepare($sql3);
-    $stmt3->bind_param('is', $nchild, $bID);  
-    
-	if ($stmt3->execute()) { 
-        echo 'Booking ID # ' . $bID . ' successfully updated.';
-    }
-    else {
-        echo 'Update not successful, please try again'; 
-    }
-    
-} 
-else {
-    echo 'Update not successful, please try again'; 
-}
+        // Fetches and stores the required values into variables for later use.
+        $bID = $_POST['bid']; 
+        $nadult = $_POST['nadult']; 
+        $nchild = $_POST['nchild']; 
 
-/* close statement and connection*/  
-$stmt2->close(); 
-$stmt3->close(); 
-$mysqli->close();
-?>
+        // Prepared statement, stage 1: prepare and bind parameters.
+        $stmt1 = $mysqli->prepare($sql1);
+        $stmt1->bind_param('is', $nadult, $bID); 
 
-<br><center><a href="index.html" class="button">Back to Home</a></br></center>
+        // Executes the first query. If successful, executes the second query. Else, prints an error message.
+        if ($stmt1->execute()) { 
+            // Prepared statement, stage 1: prepare the next sql statement.
+            $stmt2 = $mysqli->prepare($sql2);
+            $stmt2->bind_param('is', $nchild, $bID);  
+
+            // Executes the second query. If successful, prints a success message. Else, prints an error message.
+            if ($stmt2->execute()) { 
+                echo 'Booking ID # ' . $bID . ' successfully updated.';
+            }
+            else {
+                echo 'Update not successful. Please try again'; 
+            }
+
+        } 
+        else {
+            echo 'Update not successful. Please try again'; 
+        }
+
+        // Close statement and connection.
+        $stmt1->close(); 
+        $stmt2->close(); 
+        $mysqli->close();
+    ?>
+
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+</body>

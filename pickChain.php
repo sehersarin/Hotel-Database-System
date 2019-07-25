@@ -1,45 +1,56 @@
+<head>
+  <title>Check Hotel Availability</title>
+</head>
+
 <body>
     <h1>Choose Desired Hotel Chain</h1>
-
+    
+    <!-- Directs to the handleHotelPref.php when the user presses the Continue button. 
+     Uses post as it is more secure than get -->
     <form action="handleHotelPref.php" method="post">
 
         <?php
-        // Enable error logging: 
-        error_reporting(E_ALL ^ E_NOTICE);
-        // mysqli connection via user-defined function
-        include ('./my_connect.php');
-        $mysqli = get_mysqli_conn();
-        
-        // SQL statement
-        $sql = "SELECT name "
-            . "FROM chain";
+            // Enable error logging: 
+            error_reporting(E_ALL ^ E_NOTICE);
+            // mysqli connection via user-defined function
+            include ('./my_connect.php');
+            $mysqli = get_mysqli_conn();
 
-        // Prepared statement, stage 1: prepare
-        $stmt = $mysqli->prepare($sql);
+            // SQL statement to get the chain names from the database. Does not need DISTINCT as name is the primary key of the chain entity.
+            $sql = "SELECT name "
+                . "FROM chain";
 
-        // Prepared statement, stage 2: execute
-        $stmt->execute();
+            // Prepared statement, stage 1: prepare
+            $stmt = $mysqli->prepare($sql);
 
-        // Bind result variables 
-        $stmt->bind_result($chain_name); 
+            // Prepared statement, stage 2: execute
+            $stmt->execute();
 
-        /* fetch values */ 
-        echo '<label for="chain">chain: </label>'; 
-        echo '<select name="chain">'; 
+            // Bind result variables 
+            $stmt->bind_result($chain_name); 
 
-        while ($stmt->fetch()) {
-            printf ('<option>%s</option>', $chain_name); 
-        }
+            // Initializes the drop-down with the unique chain names. 
+            echo '<label for="chain">Hotel Chain: </label>'; 
+            echo '<select name="chain">'; 
 
-        echo '</select><br>'; 
+            // Uses a while loop to add options to the drop down as long as there is still a chain to be fetched.
+            while ($stmt->fetch()) {
+                printf ('<option>%s</option>', $chain_name); 
+            }
 
-        /* close statement and connection*/ 
-        $stmt->close(); 
-        $mysqli->close();
+            echo '</select><br>'; 
+
+            // Close statement and connection.
+            $stmt->close(); 
+            $mysqli->close();
         ?>
 
         <br>
         <input type="submit" value="Continue"/>
 
     </form>
+    
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+
 </body>
