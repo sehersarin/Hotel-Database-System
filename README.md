@@ -2,6 +2,13 @@
 
 Hotel Database Information Retrieval System for use by internal employees.
 
+## **Entity Relationship & Relational Diagrams**
+
+<p float="center">
+  <img src="/Final ER Diagram.png" width="400" height="400" />
+  <img src="/Final Relational Diagram.png" width="450" height="400"/>
+</p>
+
 ## **Application Functionality**
 
 ### Update Booking
