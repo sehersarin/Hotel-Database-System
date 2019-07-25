@@ -53,6 +53,8 @@
         while ($stmtTypes->fetch()) {
             $type[] = $classification;
         }
+    
+        echo 'Number of available rooms in ' . $hotel_name . ' for '.$sDate . ' to ' . $eDate .' of type: <br>';
 
         // Loop through the type arrays and print the available rooms under each type.
         for ($index = 0; $index < count($type); $index++){
@@ -62,7 +64,6 @@
             // Bind result variables 
             $stmt->bind_result($no_rooms); 
             
-            echo 'Number of available rooms in ' . $hotel_name . ' for '.$sDate . ' to ' . $eDate .'of type: <br>';
             // Fetches the value from the SQL statement and prints the number of available rooms for each type.
             if ($stmt->fetch()) { 
                 echo $type[$index].': ' . $no_rooms . ' rooms <br>'; 
