@@ -1,10 +1,14 @@
 <head>
   <title>Employee Salary Statistics</title>
+  <link rel="stylesheet" href="messageFormat.css">
 </head>
 
-<body>
 
+<body>
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
     <h1>Employee Salary Statistics</h1>
+    <div>
     <form>
 
         <?php
@@ -67,7 +71,12 @@
         ?>
 
     </form>
+<<<<<<< Updated upstream
     
     <!-- Provides a link back to the Home page. -->
     <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+=======
+    </div>
+
+>>>>>>> Stashed changes
 </body>

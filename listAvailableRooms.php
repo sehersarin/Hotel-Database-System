@@ -1,9 +1,12 @@
 <head>
   <title>Check Hotel Availability</title>
+ <link rel="stylesheet" href="messageFormat.css">
 </head>
 
+<div>
 <body>
-
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
     <?php
         // Enable error logging: 
         error_reporting(E_ALL ^ E_NOTICE);
@@ -79,7 +82,5 @@
         $mysqli->close();
     ?>
 
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
-
 </body>
+</div>

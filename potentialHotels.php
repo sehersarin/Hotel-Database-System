@@ -1,8 +1,12 @@
 <head>
   <title>See Event Booking for Large Groups</title>
+  <link rel="stylesheet" href="messageFormat.css">
 </head>
 
+<div>
 <body>
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
     <h1>Possible Hotels</h1>
 
     <?php
@@ -52,6 +56,5 @@
 
     ?>
 
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
 </body>
+</div>

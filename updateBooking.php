@@ -1,9 +1,12 @@
 <head>
   <title>Update Booking</title>
+  <link rel="stylesheet" href="messageFormat.css">
 </head>
 
+<div>
 <body>
-
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
     <h1>Update Booking</h1>
 
     <?php
@@ -58,6 +61,5 @@
         $mysqli->close();
     ?>
 
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
 </body>
+</div>
