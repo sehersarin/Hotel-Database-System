@@ -48,6 +48,7 @@
                 echo '<input type="text" name="pcode" value="'.$postal_code.'"/><br>'; 
                 echo '<label for="phone_no">Phone Number: </label>'; 
                 echo '<input type="text" name="phone_no" value="'.$phone_no.'"/><br>'; 
+                echo '<input type="submit" value="Update"/>';
             } 
             // Provides a message to the user if the guest does not exist.
             else {
@@ -57,9 +58,7 @@
             $stmt->close(); 
             $mysqli->close();
         ?>
-        <br>
-        <input type="submit" value="Update"/>
-        </br>
+ 
     </form>
 
     <!-- Provides a link back to the Home page. -->
