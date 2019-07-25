@@ -19,7 +19,6 @@ input[type=text], select, input[type=date], option, input[type=number] {
 
 input[type=submit] {
   width: 25%;
-  background-color: deeppink;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -27,6 +26,26 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   float: right;
+}
+
+.teal{
+    background-color: darkcyan;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.orange{
+    background-color: darkorange;
+}
+
+.pink{
+    background-color: deeppink;
 }
 
 input[type=submit]:hover {
