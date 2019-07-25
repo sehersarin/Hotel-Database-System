@@ -1,6 +1,6 @@
 <head>
     <title>Update Guest Information</title>
-    <link rel="stylesheet" href="messageFormat.css">
+    <link rel="stylesheet" href="formFormat.css">
 </head>
 
 <body>
@@ -56,7 +56,7 @@
             } 
             // Provides a message to the user if the guest does not exist.
             else {
-                echo '<label for="guest_ID">Guest does not exist.</label>'; 
+                echo '<label for="guest_ID"><center>Guest does not exist.</center></label>'; 
             }
             // Close statement and connection.
             $stmt->close(); 
