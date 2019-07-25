@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="messageFormat.css">
 </head>
 
+<div>
 <body>
     <!-- Provides a link back to the Home page. -->
     <a href="index.html" class="button">Back to Home</a> <br>
@@ -66,3 +67,4 @@
     ?>
 
 </body>
+</div>
