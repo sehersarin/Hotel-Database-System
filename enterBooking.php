@@ -5,7 +5,7 @@
 
 <body>
     <!-- Provides a link back to the Home page. -->
-    <a href="index.html" class="button">Back to Home</a> <br>
+    <br><a href="index.html" class="button">Back to Home</a>
 
     <h1>Update Booking</h1>
     
