@@ -1,12 +1,16 @@
 <head>
   <title>Check Hotel Availability</title>
+<link rel="stylesheet" href="formFormat.css">
 </head>
 
 <body>
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
     <h1>Select Desired Hotel</h1>
     
     <!-- Directs to the listAvailableRooms.php when the user presses the Check Availability button.
      Uses post as it is more secure than get -->
+    <div>
     <form action="listAvailableRooms.php" method="post">
 
         <?php
@@ -56,7 +60,7 @@
         <br>
         <input type="submit" value="Check Availability"/>
     </form>
+    </div>
 
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+
 </body>
