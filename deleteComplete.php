@@ -1,8 +1,14 @@
 <head>
-  <title>Delete Guest</title>
+    <title>Delete Guest</title>
+    <link rel="stylesheet" href="formFormat.css">
 </head>
 
 <body>
+    <!-- Provides a link back to the Home page. -->
+    <a href="index.html" class="button">Back to Home</a> <br>
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+
     <?php
     // Enable error logging: 
         error_reporting(E_ALL ^ E_NOTICE);
@@ -59,6 +65,4 @@
 
     ?>
 
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
 </body>

@@ -1,5 +1,6 @@
 <head>
-  <title>Update Guest Information</title>
+    <title>Update Guest Information</title>
+    <link rel="stylesheet" href="formFormat.css">
 </head>
 
 <body>
@@ -61,6 +62,4 @@
  
     </form>
 
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
 </body>
