@@ -71,12 +71,6 @@
         ?>
 
     </form>
-<<<<<<< Updated upstream
-    
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
-=======
     </div>
 
->>>>>>> Stashed changes
 </body>
