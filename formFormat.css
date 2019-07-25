@@ -19,7 +19,6 @@ input[type=text], select, input[type=date], option, input[type=number] {
 
 input[type=submit] {
   /*By default, makes all the buttons pink. Else, colour-codes them to their respective option colours on the Home page.*/
-  background-color: deeppink;
   width: 25%;
   color: white;
   padding: 14px 20px;
@@ -47,7 +46,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: pink;
+  background-color: black;
 }
 
 div {
