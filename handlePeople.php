@@ -1,8 +1,13 @@
 <head>
   <title>Update Booking</title>
+    <link rel="stylesheet" href="messageFormat.css">
 </head>
 
 <body>
+    
+    <!-- Provides a link back to the Home page. -->
+    <a href="index.html" class="button">Back to Home</a><br>
+    
     <h1>Update Booking</h1>
     
     <!-- Directs to the updateBooking.php when the user presses the Continue button.
@@ -45,7 +50,7 @@
         } 
         // Message to display for the user if the booking does not exist in the system.
         else {
-            echo 'Booking not found in the database. Please try again.'; 
+            echo '<div>Booking not found in the database. Please try again.</div>'; 
         }
 
         // Close statement and connection. 
@@ -54,8 +59,5 @@
     ?>
 
     </form>
-
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
 
 </body>
