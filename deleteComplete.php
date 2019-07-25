@@ -7,6 +7,8 @@
     <!-- Provides a link back to the Home page. -->
     <a href="index.html" class="button">Back to Home</a> <br>
 
+    <h1>Delete Guest Information</h1>
+    
     <?php
     // Enable error logging: 
         error_reporting(E_ALL ^ E_NOTICE);
