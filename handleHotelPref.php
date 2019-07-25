@@ -3,7 +3,7 @@
 </head>
 
 <body>
-<<<<<<< Updated upstream
+
     <h1>Select Desired Hotel</h1>
     
     <!-- Directs to the listAvailableRooms.php when the user presses the Check Availability button.
@@ -60,7 +60,7 @@
 
     <!-- Provides a link back to the Home page. -->
     <br><center><a href="index.html" class="button">Back to Home</a></br></center>
-=======
+
 <h1>Select Desired Hotel</h1>
 
 <!-- Directs to the listAvailableRooms.php when the user presses the Check Availability button.
@@ -108,5 +108,5 @@ Uses post as it is more secure than get -->
 
 <!-- Provides a link back to the Home page. -->
 <br><center><a href="index.html" class="button">Back to Home</a></br></center>
->>>>>>> Stashed changes
+
 </body>
