@@ -65,7 +65,7 @@
         ?>
 
         <br>
-        <input type="submit" value="Continue"/>
+        <input type="submit" class="blue" value="Continue"/>
         </br>
     </form>
     </div>
