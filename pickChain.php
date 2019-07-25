@@ -50,7 +50,7 @@
         ?>
 
         <br>
-        <input type="submit" value="Continue"/>
+        <input type="submit" class="green" value="Continue"/>
 
     </form>
     </div>
