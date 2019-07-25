@@ -12,12 +12,15 @@ Hotel Database Information Retrieval System for use by internal employees.
 **Query Descriptions**
 
 ## Update Booking
+---------------------------------
 This query demonstrates updating the database information. The update booking query allows individuals to make changes to guest bookings. Employees must enter a guest booking ID to modify the number of individuals in the room. This change is then reflected in the database. 
 
 ## Check Hotel Availability
+---------------------------------
 This query demonstrates the use of nested query and an aggregate function (count). The check hotel availability query allows front desk staff to select a hotel chain, a desired hotel and dates. The user then will be given a list of the types and number of rooms available.  
 
 ## Employee Statistics
+---------------------------------
 This query demonstrates the use of aggregate functions (avg, max, min) and natural join. The employee statistics query was created for upper management to view employee salary and average hours worked per week. The query allows the user to select a chain, then select a hotel and finally an employee type. 
 
 ## Even Booking For Large Groups
