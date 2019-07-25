@@ -1,12 +1,16 @@
 <head>
   <title>Check Hotel Availability</title>
+<link rel="stylesheet" href="formFormat.css">
 </head>
 
 <body>
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
     <h1>Choose Desired Hotel Chain</h1>
     
     <!-- Directs to the handleHotelPref.php when the user presses the Continue button. 
      Uses post as it is more secure than get -->
+    <div>
     <form action="handleHotelPref.php" method="post">
 
         <?php
@@ -49,8 +53,6 @@
         <input type="submit" value="Continue"/>
 
     </form>
-    
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+    </div>
 
 </body>

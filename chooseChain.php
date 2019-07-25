@@ -1,12 +1,16 @@
 <head>
   <title>Choose Hotel Chain</title>
+  <link rel= "stylesheet" href="formFormat.css">
 </head>
 
 <body>
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
     <h1>Choose Hotel Chain</h1>
 
     <!-- Directs to the employeeHotel.php when the user presses the Continue button. 
-        Uses post as it is more secure than get. --> 
+        Uses post as it is more secure than get. -->
+    <div>
     <form action="employeeHotel.php" method="post">
 
         <?php
@@ -50,7 +54,7 @@
         <input type="submit" value="Continue"/>
         </br>
     </form>
+    </div>
 
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+
 </body>

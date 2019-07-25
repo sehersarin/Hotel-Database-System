@@ -2,13 +2,17 @@
 <html>
     <head>
       <title>See Event Booking for Large Groups</title>
+      <link rel= "stylesheet" href="formFormat.css">
     </head>
 
     <body>
+    <!-- Provides a link back to the Home page. -->
+    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
     <h1>Event Location Inquiry</h1>
 
     <!-- Directs to the potentialHotels.php when the user presses the Continue button. 
-     Uses get as the transmitted data is not sensitive and will not exceed 2048 characters (max URL length). --> 
+     Uses get as the transmitted data is not sensitive and will not exceed 2048 characters (max URL length). -->
+    <div>
     <form action="potentialHotels.php" method="get">
 
         Enter the number of people:<br>    
@@ -17,8 +21,7 @@
         <input type="submit" name="submit" value="Continue"/>
 
     </form>
-    <!-- Provides a link back to the Home page. -->
-    <br><center><a href="index.html" class="button">Back to Home</a></br></center>
+    </div>
     
     </body>
 </html>
