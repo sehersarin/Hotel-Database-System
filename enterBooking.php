@@ -15,7 +15,7 @@
         <form action="handlePeople.php" method="post">
             <p>Enter Booking ID: </p>
             <!-- Stores the user input of booking ID into a variable named bID. -->
-            <input type="text" name="bID"/><br>
+            <input type="text" name="bID" required/><br>
             <input type="submit" name="submit" value="Continue"/>
 
         </form>
