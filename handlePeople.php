@@ -47,7 +47,7 @@
                 echo '<label for="nchild">Number of Child(ren): </label>';  
                 echo '<input type="number" name="nchild" value="'.$nchild.'"/><br>'; 
                 // Continue button only appears if the booking exists in the system.
-                echo '<input type="submit" name="submit" value="Continue"/>';
+                echo '<input type="submit" name="submit" class="teal" value="Continue"/>';
             } 
             // Message to display for the user if the booking does not exist in the system.
             else {
