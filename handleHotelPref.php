@@ -54,7 +54,7 @@
             $mysqli->close();
         ?>
         <br>
-        <input type="submit" value="Check Availability"/>
+        <input type="submit" class="green" value="Check Availability"/>
     </form>
 
     <!-- Provides a link back to the Home page. -->
