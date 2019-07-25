@@ -1,3 +1,6 @@
+/* Style formatting to enhance the appearance of the user interfaces.
+   Used separate CSS files as there is similarity in the file formatting.*/
+
 h1 {
     font-family: sans-serif;
     font-size: 70px;
