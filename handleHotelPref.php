@@ -49,9 +49,9 @@
 
             // Stores the user's inputs for the start and end date in variables named sDate and eDate respectively.
             echo '<label for="sDate">Start Date (yyyy-mm-dd): </label>'; 
-            echo '<input type="date" name="sDate" value="'.$startDate.'"/><br>'; 
+            echo '<input type="date" name="sDate" value="'.$startDate.'" required/><br>';
             echo '<label for="eDate">End Date (yyyy-mm-dd): </label>'; 
-            echo '<input type="date" name="eDate" value="'.$endDate.'"/><br>'; 
+            echo '<input type="date" name="eDate" value="'.$endDate.'" required/><br>';
 
             // Close statement and connection.
             $stmt->close(); 
