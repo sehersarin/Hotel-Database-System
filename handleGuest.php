@@ -4,6 +4,9 @@
 </head>
 
 <body>
+    <!-- Provides a link back to the Home page. -->
+    <a href="index.html" class="button">Back to Home</a> <br>
+    
     <h1>Update Guest Information</h1>
 
     <!-- Directs to the updateGuest.php when the user presses the Update button.
