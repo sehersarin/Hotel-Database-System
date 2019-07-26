@@ -48,11 +48,11 @@
                     echo '<label for="city">City: </label>'; 
                     echo '<input type="text" name="city" value="'.$city.'"required/><br>'; 
                     echo '<label for="street_no">Street: </label>'; 
-                    echo '<input type="text" name="street_no" value="'.$street_no.'required"/><br>'; 
+                    echo '<input type="text" name="street_no" value="'.$street_no.'"required/><br>'; 
                     echo '<label for="pcode">Postal Code: </label>'; 
-                    echo '<input type="text" name="pcode" value="'.$postal_code.'required"/><br>'; 
+                    echo '<input type="text" name="pcode" value="'.$postal_code.'"required/><br>'; 
                     echo '<label for="phone_no">Phone Number: </label>'; 
-                    echo '<input type="text" name="phone_no" value="'.$phone_no.'required"/><br>'; 
+                    echo '<input type="text" name="phone_no" value="'.$phone_no.'"required/><br>'; 
                     echo '<input type="submit" class="pink" value="Update"/>';
                 } 
                 // Provides a message to the user if the guest does not exist.
