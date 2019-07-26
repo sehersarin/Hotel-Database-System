@@ -83,7 +83,8 @@
         } 
         // If not successful, then prints an error message.
         else {
-            echo '<h1>Guest information not updated successfully. Please try again.</h1>'; 
+            echo '<h1>Error!</h1>
+            echo '<p>Guest information not updated successfully. Please try again.</p>'; 
         } 
 
         // Close statement and connection.
