@@ -31,7 +31,7 @@ This query demonstrates the use of group by and having. The event booking for la
 ---------------------------
 This query demonstrates insert, update and delete of an entity. The edit guest information query allows individuals to make changes to guest information stored in the database. Attributes that may be updated include name, city, street, postal code and phone number. A guest may also be added to the database or deleted from the database. 
 
-## **Interface**
+## **Application Interface**
 
 <p float="center">
   <img src="/Hotel Database Management System.png" width="900" height="500" />
