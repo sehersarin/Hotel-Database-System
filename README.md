@@ -23,7 +23,7 @@ This query demonstrates the use of nested query and an aggregate function (count
 ---------------------------------
 This query demonstrates the use of aggregate functions (avg, max, min) and natural join. The employee statistics query was created for upper management to view employee salary and average hours worked per week. The query allows the user to select a chain, then select a hotel and finally an employee type. 
 
-#### Even Booking For Large Groups
+#### Event Booking For Large Groups
 ---------------------------------
 This query demonstrates the use of group by and having. The event booking for large groups query is utilized to check which hotels are able hold an event based on the count of the room capacities when planning large scale events. The Party size is entered, and a list of possible hotels is generated that have enough room capacity to accommodate guests. 
 
